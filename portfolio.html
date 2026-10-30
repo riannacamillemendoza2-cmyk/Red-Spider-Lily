@@ -1,0 +1,322 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Red Spider Lily</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 30px 18px;
+            background:
+                linear-gradient(rgba(8,2,5,0.45), rgba(8,2,5,0.65)),
+                url("spiderlily.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #F2E5E8;
+            font-family: Georgia, serif;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px 5%;
+            margin: -30px -18px 35px;
+            background: rgba(12,3,7,0.82);
+            border-bottom: 1px solid #84344B;
+        }
+
+        nav a {
+            color: #E8B9C1;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        nav a:hover { color: #FF8DA7; }
+
+        .brand {
+            letter-spacing: 3px;
+            font-size: 17px;
+        }
+
+        header { padding: 25px 10px 35px; }
+
+        header h1 {
+            color: #F2D5DC;
+            font-size: clamp(28px, 5vw, 45px);
+            letter-spacing: 5px;
+            text-shadow: 0 2px 15px #000;
+        }
+
+        header p {
+            color: #F0CBD4;
+            font-style: italic;
+            font-size: 17px;
+        }
+
+        .folder {
+            position: relative;
+            max-width: 760px;
+            margin: 45px auto 35px;
+            padding: 35px 25px 25px;
+            background: rgba(27,5,13,0.90);
+            border: 1px solid #B34160;
+            border-radius: 8px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.65);
+        }
+
+        .folder-tab {
+            position: absolute;
+            top: -27px;
+            left: -1px;
+            width: 165px;
+            height: 28px;
+            background: #70253B;
+            border: 1px solid #B34160;
+            border-bottom: none;
+            border-radius: 8px 12px 0 0;
+        }
+
+        .folder h2 {
+            color: #F0C3CE;
+            font-size: 22px;
+            letter-spacing: 3px;
+            margin: 5px 0 28px;
+        }
+
+        .files {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 22px;
+        }
+
+        .file {
+            display: block;
+            min-height: 145px;
+            padding: 22px 12px;
+            background: rgba(65,16,33,0.88);
+            border: 1px solid #8D3B53;
+            border-radius: 7px;
+            color: #F2E5E8;
+            text-decoration: none;
+            transition: 0.25s;
+        }
+
+        .file:hover {
+            background: rgba(113,31,56,0.96);
+            border-color: #E17B96;
+            transform: translateY(-4px);
+        }
+
+        .file-icon {
+            font-size: 36px;
+            color: #F09AAF;
+            margin-bottom: 12px;
+        }
+
+        .file strong {
+            display: block;
+            color: #F5D5DE;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        .file small {
+            display: block;
+            color: #D7B5BF;
+            margin-top: 9px;
+            line-height: 1.5;
+            font-size: 12px;
+        }
+
+        .note {
+            color: #E0B8C2;
+            font-size: 13px;
+            font-style: italic;
+            margin-top: 25px;
+        }
+
+        footer {
+            margin-top: 35px;
+            padding: 20px 10px;
+            color: #E3A5B5;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 8px #000;
+        }
+
+        @media (max-width: 520px) {
+            .files { grid-template-columns: 1fr; }
+            nav { justify-content: center; }
+            .folder { padding: 30px 15px 20px; }
+            header h1 { letter-spacing: 3px; }
+        }
+
+@media screen and (max-width: 600px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    nav {
+        padding: 10px 4px;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 45px 16px;
+    }
+
+    header h1 {
+        font-size: 30px;
+        line-height: 1.3;
+        letter-spacing: 2px;
+    }
+
+    header p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .folder {
+        margin: 16px 12px;
+        padding: 20px 12px;
+    }
+
+    .folder h2 {
+        font-size: 22px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+
+    .folder h3 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .folder p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    footer {
+        padding: 20px 10px;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+
+    h1 {
+        font-size: 28px !important;
+        line-height: 1.3;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        font-size: 23px !important;
+        line-height: 1.35;
+        letter-spacing: 1px;
+    }
+
+    h3 {
+        font-size: 18px !important;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+
+    header h1 {
+        font-size: 30px !important;
+    }
+
+    .folder h2 {
+        font-size: 22px !important;
+    }
+
+    footer {
+        font-size: 11px !important;
+        letter-spacing: 1px;
+        overflow-wrap: anywhere;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a class="brand" href="index.html">&#10047; MY PORTFOLIO</a>
+        <div>
+            <a href="index.html">HOME</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="about.html">ABOUT</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>MY FOLDER</h1>
+        <p>A collection of my work and creativity.</p>
+        <p>&#10023; EMTECH PERFORMANCE TASKS 2ND TERM &#10023;</p>
+    </header>
+
+    <main class="folder">
+        <div class="folder-tab"></div>
+
+        <h2>&#10023; MY PERFORMANCE TASKS &#10023;</h2>
+
+        <div class="files">
+            <a class="file" href="./excel.xlsm" target="_blank">
+                <div class="file-icon">&#10048;</div>
+                <strong>01 &#10070; EXCEL</strong>
+                <small>Financial Dashboard</small>
+            </a>
+
+            <a class="file" href="./powerpoint.pptx" target="_blank">
+                <div class="file-icon">&#10048;</div>
+                <strong>02 &#10070; POWERPOINT</strong>
+                <small>Mini Presentation</small>
+            </a>
+
+            <a class="file" href="./Graphic Design.pdf">
+                <div class="file-icon">&#10048;</div>
+                <strong>03 &#10070; GRAPHIC DESIGN</strong>
+                <small>Design With Purpose</small>
+            </a>
+
+            <a class="file" href="./infographic.xlsm" target="_blank">
+                <div class="file-icon">&#10048;</div>
+                <strong>04 &#10070; INFOGRAPHICS</strong>
+                <small>Sales Data</small>
+            </a>
+        </div>
+
+        <p class="note">Select a file to explore my work.</p>
+    </main>
+
+    <footer>
+        &#10086; RED SPIDER LILY THEME &#10086;
+        <p>Rianna Camille A. Mendoza 12-ZARA</p>
+    </footer>
+</body>
+</html>

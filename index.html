@@ -1,0 +1,226 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Red Spider Lily</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 30px 18px;
+            background:
+                linear-gradient(rgba(8,2,5,0.45), rgba(8,2,5,0.65)),
+                url("spiderlily.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #F2E5E8;
+            font-family: Georgia, serif;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px 5%;
+            margin: -30px -18px 35px;
+            background: rgba(12,3,7,0.82);
+            border-bottom: 1px solid #84344B;
+        }
+
+        nav a {
+            color: #E8B9C1;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        nav a:hover { color: #FF8DA7; }
+
+        .brand {
+            letter-spacing: 3px;
+            font-size: 17px;
+        }
+
+        header { padding: 70px 10px 80px; }
+
+        header h1 {
+            color: #F2D5DC;
+            font-size: clamp(28px, 5vw, 45px);
+            letter-spacing: 5px;
+            text-shadow: 0 2px 15px #000;
+        }
+
+        header p {
+            color: #F0CBD4;
+            font-style: italic;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .explore {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 24px;
+            border: 1px solid #B34160;
+            border-radius: 7px;
+            background: rgba(65,16,33,0.88);
+            color: #F2E5E8;
+            text-decoration: none;
+        }
+
+        .explore:hover { background: #70253B; }
+
+        footer {
+            margin-top: 35px;
+            padding: 20px 10px;
+            color: #E3A5B5;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 8px #000;
+        }
+
+        @media (max-width: 520px) {
+            nav { justify-content: center; }
+            header h1 { letter-spacing: 3px; }
+        }
+
+@media screen and (max-width: 600px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    nav {
+        padding: 10px 4px;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 45px 16px;
+    }
+
+    header h1 {
+        font-size: 30px;
+        line-height: 1.3;
+        letter-spacing: 2px;
+    }
+
+    header p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .folder {
+        margin: 16px 12px;
+        padding: 20px 12px;
+    }
+
+    .folder h2 {
+        font-size: 22px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+
+    .folder h3 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .folder p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    footer {
+        padding: 20px 10px;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+
+    h1 {
+        font-size: 28px !important;
+        line-height: 1.3;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        font-size: 23px !important;
+        line-height: 1.35;
+        letter-spacing: 1px;
+    }
+
+    h3 {
+        font-size: 18px !important;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+
+    header h1 {
+        font-size: 30px !important;
+    }
+
+    .folder h2 {
+        font-size: 22px !important;
+    }
+
+    footer {
+        font-size: 11px !important;
+        letter-spacing: 1px;
+        overflow-wrap: anywhere;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a class="brand" href="index.html">&#10047; MY PORTFOLIO</a>
+        <div>
+            <a href="index.html">HOME</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="about.html">ABOUT</a>
+        </div>
+    </nav>
+
+    <header>
+        <p>&#10023; EMTECH PERFORMANCE TASKS 2ND TERM &#10023;</p>
+
+        <h1>MY FOLDER</h1>
+
+        <p>A collection of my work and creativity.</p>
+
+        <p>"Even among thorns, beauty blooms."</p>
+
+        <a class="explore" href="portfolio.html">
+            EXPLORE MY PERFORMANCE TASKS
+        </a>
+    </header>
+
+    <footer>
+        &#10086; RED SPIDER LILY THEME &#10086;
+        <p>Rianna Camille A. Mendoza 12-ZARA</p>
+    </footer>
+</body>
+</html>
